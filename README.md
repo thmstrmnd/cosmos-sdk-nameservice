@@ -18,10 +18,10 @@ DeleteName
     ignite chain serve -r
     ```
 * Buy a new name
-    - must be greater than 10token
-    ```
-    nameserviced tx nameservice buy-name foo 20token --from alice
-    ```
+    - Must be greater than 10token
+        ```
+        nameserviced tx nameservice buy-name foo 20token --from alice
+        ```
 * Query the chain for a list of names
     ```
     nameserviced q nameservice list-whois
@@ -31,9 +31,10 @@ DeleteName
     nameserviced tx nameservice set-name foo bar --from alice
     ```
 * Buy an existing name
-    ```
-    nameserviced tx nameservice buy-name foo 40token --from bob
-    ```
+    - Must be greater than the buy price of the original owner
+        ```
+        nameserviced tx nameservice buy-name foo 40token --from bob
+        ```
 * Query the bank balance
     ```
     nameserviced q bank balances $(nameserviced keys show alice -a)
